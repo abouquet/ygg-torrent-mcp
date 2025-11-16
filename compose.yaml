@@ -8,8 +8,8 @@ services:
     restart: unless-stopped
     ports:
       - 8000:8000
-    env_file:
-      - .env
+    environment:
+      - YGG_PASSKEY=${YGG_PASSKEY}
     dns:
       - 9.9.9.9
       - 149.112.112.112
