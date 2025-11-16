@@ -6,8 +6,8 @@ services:
     build: .
     image: ygg-torrent-mcp
     restart: unless-stopped
-    ports:
-      - 8000:8000
+    expose:
+      - "8000"
     environment:
       - YGG_PASSKEY=${YGG_PASSKEY}
     dns:
@@ -20,4 +20,3 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    network_mode: bridge
