@@ -16,4 +16,4 @@ FROM python:3.13-alpine
 COPY --from=builder --chown=app:app /app /app
 ENV PATH="/app/.venv/bin:$PATH"
 EXPOSE 8000
-CMD ["ygg-torrent-mcp", "--mode", "sse"]
+CMD ["ygg-torrent-mcp", "--mode", "streamable-http"]
