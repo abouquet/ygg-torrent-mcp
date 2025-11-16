@@ -10,11 +10,6 @@ services:
       - "8000"
     environment:
       - YGG_PASSKEY=${YGG_PASSKEY}
-    dns:
-      - 9.9.9.9
-      - 149.112.112.112
-      - 2620:fe::fe
-      - 2620:fe::9
     logging:
       driver: "json-file"
       options:
